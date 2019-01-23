@@ -1,0 +1,18 @@
+1.下载Github客户端工具
+2.进入创建仓库的目录git  init
+3.git add  .
+4.git commit -m ""
+5.ssh-keygen -t rsa -C "731831575@qq.com",用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件。
+6..ssh目录下添加config文件，没有后缀名：
+Host github.com
+User git
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+7.ssh -T git@github.com
+8.git remote set-url  origin  git@github.com:dt23666/gkaq.git ;  add  origin  https://github.com/dt23666/gkaq.git
+9.git push -u origin master
+10.git push   
+注：项目根目录下创建.gitignore文件，编辑内容要忽略的文件或文件夹。
+git  pull -r/--rebase origin master  获取与远程库的同步
